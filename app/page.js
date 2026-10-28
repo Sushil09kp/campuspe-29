@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
+import Stats from "./components/Stats/Stats";
+import Partners from "./components/Partners/Partners";
 
 const box = { minHeight: "80vh", padding: "48px 24px" };
 
@@ -9,6 +11,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Stats />
+        <Partners />
         <section id="jobs" style={{ ...box, background: "#f8fafc" }}>Jobs</section>
         <section id="colleges" style={box}>Colleges</section>
         <section id="employers" style={{ ...box, background: "#f8fafc" }}>Employers</section>

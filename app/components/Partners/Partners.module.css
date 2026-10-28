@@ -1,0 +1,51 @@
+.partners {
+  padding: 24px 0 72px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 32px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-600);
+}
+
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: scroll 30s linear infinite;
+}
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+.logo {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.logo:hover {
+  color: var(--blue-600);
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
