@@ -1,0 +1,143 @@
+.section {
+  padding: 72px 0;
+  background: #ffffff;
+}
+.tinted {
+  background: linear-gradient(180deg, #f5f8ff 0%, #eef3ff 100%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.row:hover {
+  transform: translateY(-2px);
+  border-color: #bfdbfe;
+  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.14);
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+.top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.no {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: var(--blue-50);
+  color: var(--blue-600);
+  font-size: 12px;
+  font-weight: 700;
+}
+.label {
+  color: var(--text-600);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.body h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: var(--text-900);
+}
+.body p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-600);
+}
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.badges small {
+  font-size: 11px;
+  color: var(--text-600);
+}
+
+.badge {
+  padding: 3px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.green {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #047857;
+}
+.blue {
+  background: var(--blue-50);
+  border-color: #bfdbfe;
+  color: var(--blue-600);
+}
+.purple {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+  color: #6d28d9;
+}
+.red {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+.solid {
+  background: var(--blue-500);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .section {
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+  .badges {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
