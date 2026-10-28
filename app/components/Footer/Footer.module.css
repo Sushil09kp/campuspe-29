@@ -79,6 +79,22 @@
   color: var(--blue-600);
   text-decoration: underline;
 }
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconBox {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--blue-500);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--blue-600);
+}
 
 .bottom {
   display: flex;

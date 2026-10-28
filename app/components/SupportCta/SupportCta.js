@@ -11,10 +11,10 @@ export default function SupportCta() {
             Our support team is here to help you succeed. Get in touch anytime.
           </p>
           <div className={styles.actions}>
-            <Button href="mailto:contactus@campuspe.com" size="md">
+            <Button href="mailto:sushilkumar76838@gmail.com" size="md">
               Contact Support ↗
             </Button>
-            <Button href="tel:+916362606464" variant="outline" size="md">
+            <Button href="tel:+917683833447" variant="outline" size="md">
               Schedule a Call 📞
             </Button>
           </div>
