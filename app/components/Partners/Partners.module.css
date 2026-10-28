@@ -1,6 +1,7 @@
 .partners {
   padding: 24px 0 72px;
   text-align: center;
+  overflow: hidden;
 }
 
 .title {
