@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
 
 const box = { minHeight: "80vh", padding: "48px 24px" };
 
@@ -7,7 +8,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <section id="hero" style={box}>Hero (coming next)</section>
+        <Hero />
         <section id="jobs" style={{ ...box, background: "#f8fafc" }}>Jobs</section>
         <section id="colleges" style={box}>Colleges</section>
         <section id="employers" style={{ ...box, background: "#f8fafc" }}>Employers</section>
