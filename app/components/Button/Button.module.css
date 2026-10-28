@@ -1,0 +1,66 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s,
+    border-color 0.2s, color 0.2s;
+}
+
+/* Sizes */
+.sm {
+  height: 34px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+.md {
+  height: 44px;
+  padding: 0 24px;
+  font-size: 14px;
+}
+.lg {
+  height: 52px;
+  padding: 0 32px;
+  font-size: 16px;
+}
+
+/* Primary (blue) */
+.primary {
+  background: var(--blue-500);
+  color: #fff;
+}
+.primary:hover {
+  background: var(--blue-600);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+}
+.primary:active {
+  background: #1d4ed8;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Outline (white) */
+.outline {
+  background: #fff;
+  color: var(--text-900);
+  border-color: var(--border);
+}
+.outline:hover {
+  border-color: var(--blue-500);
+  color: var(--blue-600);
+  background: var(--blue-50);
+}
+.outline:active {
+  background: #dbeafe;
+}
+
+/* Keyboard focus (Tab key) */
+.btn:focus-visible {
+  outline: 2px solid var(--blue-600);
+  outline-offset: 3px;
+}
