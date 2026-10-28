@@ -1,5 +1,6 @@
 import { footerColumns, socials } from "../../data/footer";
 import styles from "./Footer.module.css";
+import SocialIcon from "../SocialIcon/SocialIcon";
 
 export default function Footer() {
   return (
@@ -47,7 +48,7 @@ export default function Footer() {
             {socials.map((s) => (
               <li key={s}>
                 <a href="#get-started" aria-label={s}>
-                  {s.charAt(0)}
+                    <SocialIcon name={s} />
                 </a>
               </li>
             ))}
