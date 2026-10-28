@@ -1,5 +1,9 @@
+import { Lora } from "next/font/google";
 import Button from "../Button/Button";
+import { BellIcon, ArrowIcon } from "../Icons/Icons";
 import styles from "./OptionCard.module.css";
+
+const lora = Lora({ subsets: ["latin"], weight: ["600"], display: "swap" });
 
 export default function OptionCard({
   icon,
@@ -9,6 +13,7 @@ export default function OptionCard({
   description,
   features,
   cta,
+  ctaIcon,
   href,
 }) {
   return (
@@ -22,7 +27,7 @@ export default function OptionCard({
         </span>
       </div>
 
-      <h3 className={styles.title}>{title}</h3>
+      <h3 className={`${styles.title} ${lora.className}`}>{title}</h3>
       <p className={styles.desc}>{description}</p>
 
       <ul className={styles.list}>
@@ -32,7 +37,13 @@ export default function OptionCard({
       </ul>
 
       <div className={styles.cta}>
-        <Button href={href}>{cta}</Button>
+        <Button href={href}>
+          <span className={styles.ctaInner}>
+            {cta}
+            {ctaIcon === "bell" && <BellIcon />}
+            {ctaIcon === "arrow" && <ArrowIcon />}
+          </span>
+        </Button>
       </div>
     </article>
   );

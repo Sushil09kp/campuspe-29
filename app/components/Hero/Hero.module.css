@@ -1,6 +1,10 @@
 .hero {
   padding: 32px 0 64px;
-  background: radial-gradient(60% 45% at 50% 0%, #eaf2ff 0%, #ffffff 75%);
+  background:
+    radial-gradient(45% 35% at 12% 45%, rgba(219, 234, 254, 0.9), transparent 70%),
+    radial-gradient(45% 35% at 90% 60%, rgba(243, 232, 255, 0.9), transparent 70%),
+    radial-gradient(60% 40% at 50% 0%, #eaf2ff 0%, transparent 75%),
+    #ffffff;
 }
 
 .top {
@@ -19,13 +23,16 @@
 }
 
 .pill {
-  padding: 6px 14px;
-  border: 1px solid #bfdbfe;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
   border-radius: var(--radius-pill);
-  background: #fff;
+  background: #fff7ed;
   color: var(--blue-600);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.08);
 }
 
 .heading {
@@ -37,7 +44,7 @@
 }
 
 .gradient {
-  background: linear-gradient(90deg, #3b82f6, #14b8a6);
+  background: linear-gradient(90deg, #3b82f6, #4fb3a5);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -50,22 +57,29 @@
 }
 
 .ask {
+  display: flex;
+  align-items: center;
+  gap: 24px;
   margin: 0;
   font-size: 22px;
   font-weight: 600;
   color: var(--blue-500);
 }
+.ask svg {
+  color: #60a5fa;
+}
 
+/* floating cards */
 .float {
   position: absolute;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: 210px;
+  width: 220px;
   padding: 12px 14px;
-  border: 1px solid #dbeafe;
-  border-radius: 14px;
-  background: #fff;
+  border: 1px solid #c7d7fe;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 8px 24px rgba(59, 130, 246, 0.12);
   text-align: left;
   animation: float 5s ease-in-out infinite;
@@ -75,15 +89,88 @@
   box-shadow: 0 14px 32px rgba(59, 130, 246, 0.25);
 }
 .float strong {
-  font-size: 12px;
+  font-size: 13px;
 }
-.float span {
+.float span,
+.float > span {
   font-size: 12px;
   font-weight: 600;
 }
 .float small {
-  font-size: 10px;
+  font-size: 11px;
+  line-height: 1.4;
   color: var(--text-600);
+}
+
+.fHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.orange {
+  color: #d9731a;
+}
+.purple {
+  display: inline-flex;
+  color: #6d4cf5;
+}
+.blue {
+  color: var(--blue-600);
+}
+.green {
+  color: #15803d;
+}
+
+.row {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  padding: 8px 14px;
+  border-color: #e2e8f0;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  vertical-align: middle;
+}
+
+.avatars {
+  display: flex;
+}
+.avatars i {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  margin-left: -8px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 700;
+}
+.avatars i:first-child {
+  margin-left: 0;
+}
+
+.thumb {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #475569;
 }
 
 .whatsapp {
@@ -93,6 +180,8 @@
 .resume {
   top: 24px;
   right: 0;
+  width: 240px;
+  border-color: #c4b5fd;
   animation-delay: 1s;
 }
 .matched {
@@ -120,7 +209,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  max-width: 1040px;
+  max-width: 1152px;
 }
 
 @media (max-width: 1000px) {
@@ -129,5 +218,9 @@
   }
   .center {
     padding-top: 24px;
+  }
+  .ask {
+    gap: 12px;
+    font-size: 18px;
   }
 }

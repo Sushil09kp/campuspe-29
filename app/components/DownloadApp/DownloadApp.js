@@ -30,7 +30,7 @@ export default function DownloadApp() {
 
         <div className={styles.visual} aria-hidden="true">
           <div className={styles.tiltBack}>
-            <PhoneMock title="Hi, Amit Kumar" lines={4} />
+            <PhoneMock title="Hi, Rahul" lines={4} />
           </div>
           <div className={styles.tiltFront}>
             <PhoneMock title="Discover" lines={5} />

@@ -5,11 +5,11 @@ import PhoneMock from "../PhoneMock/PhoneMock";
 import styles from "./AppShowcase.module.css";
 
 const screens = [
-  { title: "Hi, Amit Kumar", lines: 3 },
+  { title: "Hi, Rahul", lines: 3 },
   { title: "Post a Job", lines: 5 },
   { title: "Discover", lines: 4 },
   { title: "My Application", lines: 5 },
-  { title: "XYZ College", lines: 3 },
+  { title: "Lila College", lines: 3 },
 ];
 
 export default function AppShowcase() {
