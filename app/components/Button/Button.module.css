@@ -7,11 +7,11 @@
   border-radius: var(--radius-pill);
   font-weight: 600;
   white-space: nowrap;
+  cursor: pointer;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s,
     border-color 0.2s, color 0.2s;
 }
 
-/* Sizes */
 .sm {
   height: 34px;
   padding: 0 16px;
@@ -28,23 +28,21 @@
   font-size: 16px;
 }
 
-/* Primary (blue) */
 .primary {
   background: var(--blue-500);
   color: #fff;
 }
 .primary:hover {
   background: var(--blue-600);
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.4);
 }
 .primary:active {
   background: #1d4ed8;
-  transform: translateY(0);
-  box-shadow: none;
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
 }
 
-/* Outline (white) */
 .outline {
   background: #fff;
   color: var(--text-900);
@@ -54,13 +52,39 @@
   border-color: var(--blue-500);
   color: var(--blue-600);
   background: var(--blue-50);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.15);
 }
 .outline:active {
   background: #dbeafe;
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
 }
 
-/* Keyboard focus (Tab key) */
+.btn svg {
+  transition: transform 0.2s;
+}
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+
 .btn:focus-visible {
-  outline: 2px solid var(--blue-600);
-  outline-offset: 3px;
+  outline: none;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--blue-600);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn svg {
+    transition: none;
+  }
+  .primary:hover,
+  .primary:active,
+  .outline:hover,
+  .outline:active,
+  .btn:hover svg {
+    transform: none;
+  }
 }

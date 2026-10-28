@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import styles from "./ResumeUpload.module.css";
 
-const MAX_SIZE = 10 * 1024 * 1024; // 10MB in bytes
+const MAX_SIZE = 10 * 1024 * 1024; 
 const ALLOWED = ["pdf", "doc", "docx"];
 
 const checks = [
