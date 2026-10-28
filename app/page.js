@@ -8,9 +8,9 @@ import FeatureSection from "./components/FeatureSection/FeatureSection";
 import AppShowcase from "./components/AppShowcase/AppShowcase";
 import DownloadApp from "./components/DownloadApp/DownloadApp";
 import SupportCta from "./components/SupportCta/SupportCta";
+import ReadyStrip from "./components/ReadyStrip/ReadyStrip";
+import Footer from "./components/Footer/Footer";
 import { colleges, employers } from "./data/features";
-
-const box = { minHeight: "80vh", padding: "48px 24px" };
 
 export default function Home() {
   return (
@@ -27,9 +27,10 @@ export default function Home() {
         <AppShowcase />
         <DownloadApp />
         <SupportCta />
-        <section id="get-started" style={box}>Get started</section>
+        <ReadyStrip />
+        <div id="get-started" />
       </main>
-      <footer id="footer" style={{ ...box, minHeight: "40vh" }}>Footer</footer>
+      <Footer />
     </>
   );
 }
