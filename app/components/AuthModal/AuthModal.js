@@ -132,10 +132,6 @@ export default function AuthModal({ mode, onClose, onSuccess, onSwitch }) {
             {isSignUp ? "Sign In" : "Register"}
           </button>
         </p>
-
-        <p className={styles.demo}>
-          Demo only. No real account is created and no password is saved.
-        </p>
       </div>
     </div>
   );
