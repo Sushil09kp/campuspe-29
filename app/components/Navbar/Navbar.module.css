@@ -46,15 +46,12 @@
   font-weight: 500;
   transition: color 0.2s;
 }
-
 .links a:hover {
   color: var(--blue-600);
 }
-
 .links a:active {
   color: #1d4ed8;
 }
-
 .links a:focus-visible,
 .signin:focus-visible {
   outline: 2px solid var(--blue-600);
@@ -67,19 +64,35 @@
   align-items: center;
   gap: 20px;
 }
+
+/* Sign In is a button now, so reset the default button look */
 .signin {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 500;
-  transition: color 0.2s;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.15s;
 }
-
 .signin:hover {
   color: var(--blue-600);
 }
-
 .signin:active {
   color: #1d4ed8;
   transform: scale(0.97);
+}
+
+.hello {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-900);
 }
 
 .burger {
