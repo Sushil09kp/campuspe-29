@@ -39,13 +39,13 @@ export default function Navbar() {
 
           <div className={styles.actions}>
             <a
-              href="#get-started"
+              href="#try-it-live"
               className={styles.signin}
               onClick={() => setOpen(false)}
             >
               Sign In
             </a>
-            <Button href="#get-started" size="sm" onClick={() => setOpen(false)}>
+            <Button href="#try-it-live" size="sm" onClick={() => setOpen(false)}>
               Sign Up
             </Button>
           </div>

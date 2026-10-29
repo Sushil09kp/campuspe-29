@@ -46,9 +46,15 @@
   font-weight: 500;
   transition: color 0.2s;
 }
+
 .links a:hover {
   color: var(--blue-600);
 }
+
+.links a:active {
+  color: #1d4ed8;
+}
+
 .links a:focus-visible,
 .signin:focus-visible {
   outline: 2px solid var(--blue-600);
@@ -66,8 +72,14 @@
   font-weight: 500;
   transition: color 0.2s;
 }
+
 .signin:hover {
   color: var(--blue-600);
+}
+
+.signin:active {
+  color: #1d4ed8;
+  transform: scale(0.97);
 }
 
 .burger {
